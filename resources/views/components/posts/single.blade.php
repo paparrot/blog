@@ -1,10 +1,9 @@
-<article class="flex flex-col gap-10">
+<article class="flex flex-col gap-6">
     <header class="flex flex-col gap-2">
-        <h2 class="text-4xl leading-snug font-bold text-gray-900">
+        <h2 class="text-2xl text-center md:text-start md:text-4xl leading-snug mb-2 font-bold text-gray-900">
             {{ $post->title }}
         </h2>
-        <hr>
-        <div class="text-sm font-semibold text-gray-500 flex justify-between">
+        <div class="text-sm font-semibold text-gray-500 bg-gray-50 py-2 px-4 rounded shadow flex flex-col space-y-2 md:space-y-0 md:flex-row items-center md:justify-between">
             <time>
                 <span>
                     @lang('settings.posts.published-at')
@@ -24,7 +23,6 @@
                 </p>
             @endif
         </div>
-        <hr>
     </header>
     <section class="content" id="content">
         {!! $post->content !!}

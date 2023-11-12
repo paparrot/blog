@@ -8,7 +8,7 @@
         </p>
     </section>
 
-    <section class="py-10 flex flex-col gap-10">
+    <section class="py-5 md:py-10 flex flex-col gap-10">
         @foreach($posts as $post)
             <x-posts.list :post="$post" />
         @endforeach

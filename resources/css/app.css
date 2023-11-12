@@ -152,6 +152,10 @@
         @apply list-decimal
     }
 
+    .content > figure {
+        @apply mb-2;
+    }
+
     .content > figure > a > img {
         @apply w-full mx-auto;
     }
