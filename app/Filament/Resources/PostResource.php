@@ -10,8 +10,6 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Str;
 
 class PostResource extends Resource
@@ -50,6 +48,7 @@ class PostResource extends Resource
                 ]),
                 Forms\Components\Grid::make(1)->schema([
                     Forms\Components\RichEditor::make('content')
+                        ->fileAttachmentsVisibility('private')
                 ])
             ]);
     }
@@ -58,9 +57,15 @@ class PostResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('title'),
-                Tables\Columns\TextColumn::make('summary')->limit(30),
+                Tables\Columns\TextColumn::make('title')
+                ->searchable()
+                ->sortable(),
+                Tables\Columns\TextColumn::make('summary')
+                    ->searchable()
+                    ->sortable()
+                    ->limit(30),
                 Tables\Columns\TextColumn::make('published_at')
+                    ->sortable()
             ])
             ->filters([
                 //

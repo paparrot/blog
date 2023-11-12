@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e4115892b73f2bb7a032a8692562133a",
+    "content-hash": "dea24a66ba2418777ddf4f1d6cd1be14",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -210,6 +210,77 @@
                 }
             ],
             "time": "2023-01-15T23:15:59+00:00"
+        },
+        {
+            "name": "codeat3/blade-simple-icons",
+            "version": "1.93.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/codeat3/blade-simple-icons.git",
+                "reference": "5e0c445844381327c49cb54fa05c32da3cf8a425"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codeat3/blade-simple-icons/zipball/5e0c445844381327c49cb54fa05c32da3cf8a425",
+                "reference": "5e0c445844381327c49cb54fa05c32da3cf8a425",
+                "shasum": ""
+            },
+            "require": {
+                "blade-ui-kit/blade-icons": "^1.1",
+                "illuminate/support": "^8.0|^9.0|^10.0",
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "codeat3/blade-icon-generation-helpers": "^0.3",
+                "codeat3/phpcs-styles": "^1.0",
+                "orchestra/testbench": "^6.0|^7.0|^8.0",
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Codeat3\\BladeSimpleIcons\\BladeSimpleIconsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Codeat3\\BladeSimpleIcons\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Swapnil Sarwe",
+                    "homepage": "https://swapnilsarwe.com"
+                },
+                {
+                    "name": "Dries Vints",
+                    "homepage": "https://driesvints.com"
+                }
+            ],
+            "description": "A package to easily make use of \"Simple Icons\" in your Laravel Blade views. ",
+            "homepage": "https://github.com/codeat3/blade-simple-icons",
+            "keywords": [
+                "blade",
+                "laravel",
+                "simpleicons"
+            ],
+            "support": {
+                "issues": "https://github.com/codeat3/blade-simple-icons/issues",
+                "source": "https://github.com/codeat3/blade-simple-icons/tree/1.93.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/swapnilsarwe",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-11-06T14:45:53+00:00"
         },
         {
             "name": "danharrin/date-format-converter",
