@@ -9,7 +9,7 @@ class Posts extends Component
 {
     public function render()
     {
-        $posts = Post::where('published_at', '<', today())->orderBy('published_at', 'desc')->paginate(4);
+        $posts = Post::where('published_at', '<', now())->orderBy('published_at', 'desc')->paginate(4);
 
         return view('livewire.pages.posts', compact('posts'));
     }

@@ -47,7 +47,7 @@ class PostResource extends Resource
                         ->required()
                 ]),
                 Forms\Components\Grid::make(1)->schema([
-                    Forms\Components\RichEditor::make('content')
+                    Forms\Components\MarkdownEditor::make('content')
                         ->fileAttachmentsVisibility('private')
                 ])
             ]);

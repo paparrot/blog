@@ -25,7 +25,7 @@
         </div>
     </header>
     <section class="content" id="content">
-        {!! $post->content !!}
+        {{  \Filament\Support\Markdown::block($post->content) }}
     </section>
 </article>
 
